@@ -1,22 +1,22 @@
-#-*- coding:utf-8 -*- 
-#-- db config --
+# -*- coding:utf-8 -*-
+# -- db config --
 DB_HOST = "localhost"
 DB_PORT = 3306
 DB_USER = "root"
-DB_PASSWD = "123456"
+DB_PASSWD = "123"
 DB_NAME = "thepast"
 
-#-- smtp config --
+# -- smtp config --
 SMTP_SERVER = "localhost"
 SMTP_USER = ""
 SMTP_PASSWORD = ""
 
-#-- mc config --
+# -- mc config --
 # mc replace redis
 MEMCACHED_HOST = "127.0.0.1"
 MEMCACHED_PORT = 11211
 
-#-- app config --
+# -- app config --
 DEBUG = True
 SECRET_KEY = "dev_key_of_thepast"
 SESSION_COOKIE_NAME = "pastme"
@@ -24,14 +24,14 @@ PERMANENT_SESSION_LIFETIME = 3600 * 24 * 30
 
 SITE_COOKIE = "pastck"
 
-#-- class kind --#
+# -- class kind --#
 K_SYNCTASK = 1000
 K_TASKQUEUE = 1001
 
-#-- openid type config --
+# -- openid type config --
 OPENID_DOUBAN = 'douban'
 OPENID_SINA = 'sina'
-OPENID_QQ = 'qq' ##qq weibo
+OPENID_QQ = 'qq'  ##qq weibo
 OPENID_TWITTER = 'twitter'
 OPENID_THEPAST = 'thepast'
 OPENID_RENREN = 'renren'
@@ -40,29 +40,29 @@ OPENID_INSTAGRAM = 'instagram'
 OPENID_WORDPRESS = 'wordpress'
 
 OPENID_TYPE_DICT = {
-    OPENID_DOUBAN : "D",
-    OPENID_SINA : "S",
-    OPENID_QQ : "Q",
-    OPENID_TWITTER : "T",
-    OPENID_WORDPRESS : "W",
-    OPENID_THEPAST : "M",
+    OPENID_DOUBAN: "D",
+    OPENID_SINA: "S",
+    OPENID_QQ: "Q",
+    OPENID_TWITTER: "T",
+    OPENID_WORDPRESS: "W",
+    OPENID_THEPAST: "M",
     OPENID_RENREN: "R",
     OPENID_INSTAGRAM: "I",
 }
-OPENID_TYPE_DICT_REVERSE = dict((v,k) for k, v in OPENID_TYPE_DICT.iteritems())
+OPENID_TYPE_DICT_REVERSE = dict((v, k) for k, v in OPENID_TYPE_DICT.iteritems())
 
 OPENID_TYPE_NAME_DICT = {
-    "D" : u"豆瓣",
-    "S" : u"新浪微博",
-    "T" : u"twitter",
-    "Q" : u"腾讯微博",
-    "W" : u"Wordpress",
-    "M" : u"Thepast",
-    "R" : u"人人",
-    "I" : u"Instagram",
+    "D": u"豆瓣",
+    "S": u"新浪微博",
+    "T": u"twitter",
+    "Q": u"腾讯微博",
+    "W": u"Wordpress",
+    "M": u"Thepast",
+    "R": u"人人",
+    "I": u"Instagram",
 }
 
-CAN_SHARED_OPENID_TYPE = [ "D", "S", "T", "Q", "R", "I", ]
+CAN_SHARED_OPENID_TYPE = ["D", "S", "T", "Q", "R", "I", ]
 
 wELCOME_MSG_DICT = {
     "D": u"#thepast.me# 今天的点滴，就是明天的旧时光， thepast.me， 备份广播，往事提醒  http://thepast.me ",
@@ -73,41 +73,41 @@ wELCOME_MSG_DICT = {
     "I": u"#thepast.me# 今天的点滴，就是明天的旧时光， thepast.me， 备份你的instagram，提醒往事  http://thepast.me ",
 }
 
-#-- oauth key & secret config --
+# -- oauth key & secret config --
 APIKEY_DICT = {
-    OPENID_DOUBAN : {
-        "key" : "",
-        "secret" : "",
-        "redirect_uri" : "http://thepast.me/connect/douban/callback",
+    OPENID_DOUBAN: {
+        "key": "",
+        "secret": "",
+        "redirect_uri": "http://thepast.me/connect/douban/callback",
     },
-    OPENID_SINA : {
-        "key" : "",
-        "secret" : "",
-        "redirect_uri" : "http://thepast.me/connect/sina/callback",
+    OPENID_SINA: {
+        "key": "",
+        "secret": "",
+        "redirect_uri": "http://thepast.me/connect/sina/callback",
     },
-    OPENID_TWITTER : {
-        "key" : "",
-        "secret" : "",
-        "redirect_uri" : "http://thepast.me/connect/twitter/callback",
+    OPENID_TWITTER: {
+        "key": "",
+        "secret": "",
+        "redirect_uri": "http://thepast.me/connect/twitter/callback",
     },
     OPENID_QQ: {
-        "key" : "",
-        "secret" : "",
-        "redirect_uri" : "http://thepast.me/connect/qq/callback",
+        "key": "",
+        "secret": "",
+        "redirect_uri": "http://thepast.me/connect/qq/callback",
     },
     OPENID_RENREN: {
-        "key" : "",
-        "secret" : "",
-        "redirect_uri" : "http://thepast.me/connect/renren/callback",
+        "key": "",
+        "secret": "",
+        "redirect_uri": "http://thepast.me/connect/renren/callback",
     },
     OPENID_INSTAGRAM: {
-        "key" : "",
-        "secret" : "",
-        "redirect_uri" : "http://thepast.me/connect/instagram/callback",
+        "key": "",
+        "secret": "",
+        "redirect_uri": "http://thepast.me/connect/instagram/callback",
     },
 }
 
-#-- category of status --
+# -- category of status --
 CATE_DOUBAN_STATUS = 100
 CATE_DOUBAN_NOTE = 101
 CATE_DOUBAN_MINIBLOG = 102
@@ -167,13 +167,14 @@ CACHE_DIR = "/home/work/proj/thepast/var/cache"
 FILE_DOWNLOAD_DIR = "/home/work/proj/thepast/var/down"
 PDF_FILE_DOWNLOAD_DIR = FILE_DOWNLOAD_DIR + "/pdf"
 
-#suicide log
+# suicide log
 SUICIDE_LOG = "/home/work/proj/thepast/suicide.log"
 
 try:
     from local_config import *
-except:
+except IOError:
     import warnings
+
     warnings.warn('no local config')
 
 
